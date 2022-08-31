@@ -158,26 +158,26 @@ class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
                   touchController
                       .add(Gesture(GestureType.onForcePressUpdate, tapDetail));
                 },
-          // onPanStart:
-          //     !widget.gesturesToOverride.contains(GestureType.onPanStart)
-          //         ? null
-          //         : (tapDetail) {
-          //             touchController
-          //                 .add(Gesture(GestureType.onPanStart, tapDetail));
-          //           },
-          // onPanUpdate:
-          //     !widget.gesturesToOverride.contains(GestureType.onPanUpdate)
-          //         ? null
-          //         : (tapDetail) {
-          //             touchController
-          //                 .add(Gesture(GestureType.onPanUpdate, tapDetail));
-          //           },
-          // onPanDown: !widget.gesturesToOverride.contains(GestureType.onPanDown)
-          //     ? null
-          //     : (tapDetail) {
-          //         touchController
-          //             .add(Gesture(GestureType.onPanDown, tapDetail));
-          //       },
+          onPanStart:
+              !widget.gesturesToOverride.contains(GestureType.onPanStart)
+                  ? null
+                  : (tapDetail) {
+                      touchController
+                          .add(Gesture(GestureType.onPanStart, tapDetail));
+                    },
+          onPanUpdate:
+              !widget.gesturesToOverride.contains(GestureType.onPanUpdate)
+                  ? null
+                  : (tapDetail) {
+                      touchController
+                          .add(Gesture(GestureType.onPanUpdate, tapDetail));
+                    },
+          onPanDown: !widget.gesturesToOverride.contains(GestureType.onPanDown)
+              ? null
+              : (tapDetail) {
+                  touchController
+                      .add(Gesture(GestureType.onPanDown, tapDetail));
+                },
           onSecondaryTapDown: !widget.gesturesToOverride
                   .contains(GestureType.onSecondaryTapDown)
               ? null
